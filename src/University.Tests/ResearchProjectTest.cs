@@ -110,6 +110,28 @@ namespace University.Tests
         }
 
         [TestMethod]
+        public void Add_unique_research_project()
+        {
+            using UniversityContext context = new UniversityContext(_options);
+            {
+                AddResearchProjectViewModel addResearchProjectViewModel = new AddResearchProjectViewModel(context, _dialogService)
+                {
+                    Title = "Unique Research Project",
+                    Description = "This is a unique research project description.",
+                    Supervisor = "Dr. Unique",
+                    StartDate = new DateTime(2024, 9, 1),
+                    EndDate = new DateTime(2025, 9, 1),
+                    Budget = 50000.0f
+                };
+                addResearchProjectViewModel.Save.Execute(null);
+
+                bool newResearchProjectExists = context.ResearchProjects.Any(rp => rp.Title == "Unique Research Project" && rp.Supervisor == "Dr. Unique");
+                Assert.IsTrue(newResearchProjectExists);
+            }
+        }
+
+
+        [TestMethod]
         public void Add_research_project_without_title()
         {
             using UniversityContext context = new UniversityContext(_options);
