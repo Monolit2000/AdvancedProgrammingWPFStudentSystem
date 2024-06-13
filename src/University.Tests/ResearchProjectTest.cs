@@ -88,6 +88,26 @@ namespace University.Tests
             }
         }
 
+        [TestMethod]
+        public void Add_research_project_with_valid_data()
+        {
+            using UniversityContext context = new UniversityContext(_options);
+            {
+                AddResearchProjectViewModel addResearchProjectViewModel = new AddResearchProjectViewModel(context, _dialogService)
+                {
+                    Title = "Project without Supervisor",
+                    Description = "Description without title",
+                    Supervisor = "Dr. NoTitle",
+                    StartDate = new DateTime(2024, 8, 1),
+                    EndDate = new DateTime(2025, 8, 1),
+                    Budget = 30000.0f
+                };
+                addResearchProjectViewModel.Save.Execute(null);
+
+                bool newResearchProjectExists = context.ResearchProjects.Any(rp => rp.Title == "Project without Supervisor" && rp.Supervisor == "Dr. NoTitle");
+                Assert.IsTrue(newResearchProjectExists);
+            }
+        }
 
         [TestMethod]
         public void Add_research_project_without_title()

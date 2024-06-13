@@ -333,7 +333,7 @@ namespace University.Tests
         #region RemuveTests
 
         [TestMethod]
-        public void Remove_StudentOrganization_With_Valid_Id()
+        public void Remove_AthleticsFacilitie_With_Valid_Id()
         {
             using (var context = new UniversityContext(_options))
             {
@@ -350,7 +350,7 @@ namespace University.Tests
         }
 
         [TestMethod]
-        public void Remove_StudentOrganization_With_Invalid_Id()
+        public void Remove_AthleticsFacilitie_With_Invalid_Id()
         {
             using (var context = new UniversityContext(_options))
             {
