@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VTZ9t5GRwmR60WNCse8WET31rbNGHqAc4itfLamwZSsoBShan0/EcdGrAyclafdR0Kfuz0Yrgh3fW2be74KdRQ==",
+  "dgSpecHash": "3paAiJmD4Ozcz83tqSeQzHxoJ+A40brBl6wt15fdWjYplM3ZfLi5f11KofUKKkTs+oJ7OqoB1XFkCwKp/BPUNg==",
   "success": true,
-  "projectFilePath": "E:\\C#_WORK\\AStudent-Pack3\\src\\University.Interfaces\\University.Interfaces.csproj",
+  "projectFilePath": "E:\\C#_WORK\\AdvancedProgrammingWPFStudentSystem\\src\\University.Interfaces\\University.Interfaces.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -226,7 +226,7 @@ namespace University.Tests
         #region Remove Tests
 
         [TestMethod]
-        public void Remove_Classroom_With_Valid_Id()
+        public void Remove_ResearchProject_With_Valid_Id()
         {
             using (var context = new UniversityContext(_options))
             {
@@ -236,14 +236,14 @@ namespace University.Tests
 
                 viewModel.Remove.Execute((long)1);
 
-                var classroomExists = context.ResearchProjects.Any(c => c.ResearchProjectId == 1);
-                Assert.IsFalse(classroomExists);
+                var researchProjectExists = context.ResearchProjects.Any(c => c.ResearchProjectId == 1);
+                Assert.IsFalse(researchProjectExists);
                 Assert.AreEqual(initialCount - 1, context.ResearchProjects.Count());
             }
         }
 
         [TestMethod]
-        public void Remove_Classroom_Without_Confirmation()
+        public void Remove_ResearchProject_Without_Confirmation()
         {
             using (var context = new UniversityContext(_options))
             {
@@ -253,14 +253,14 @@ namespace University.Tests
 
                 viewModel.Remove.Execute((long)1);
 
-                var classroomExists = context.ResearchProjects.Any(c => c.ResearchProjectId == 1);
-                Assert.IsTrue(classroomExists);
+                var researchProjectExists = context.ResearchProjects.Any(c => c.ResearchProjectId == 1);
+                Assert.IsTrue(researchProjectExists);
                 Assert.AreEqual(initialCount, context.ResearchProjects.Count());
             }
         }
 
         [TestMethod]
-        public void Remove_Classroom_With_Invalid_Id()
+        public void Remove_ResearchProject_With_Invalid_Id()
         {
             using (var context = new UniversityContext(_options))
             {
@@ -270,8 +270,8 @@ namespace University.Tests
 
                 viewModel.Remove.Execute((long)9999);
 
-                var classroomExists = context.ResearchProjects.Any(c => c.ResearchProjectId == 9999);
-                Assert.IsFalse(classroomExists);
+                var researchProjectExists = context.ResearchProjects.Any(c => c.ResearchProjectId == 9999);
+                Assert.IsFalse(researchProjectExists);
                 Assert.AreEqual(initialCount, context.ResearchProjects.Count());
             }
         }

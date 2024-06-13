@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/iPQQZE1t1PG/H5uT18ZoNZHgGXlpHdYr8ZEdAYPJQuXv9f+HfpclIb5aFiIVjlFHlG4r2V7eGJxivUAnRal+w==",
+  "dgSpecHash": "Xcyj2QjN3QfihYFX8Tyq4UKwMIfvFbhnHMD9oKtBEXBO8iZeNFY/XYD+ozisoOf6S81BxITs5bOS4iGxEIDSTA==",
   "success": true,
-  "projectFilePath": "E:\\C#_WORK\\AStudent-Pack3\\src\\University.Views\\University.Views.csproj",
+  "projectFilePath": "E:\\C#_WORK\\AdvancedProgrammingWPFStudentSystem\\src\\University.Views\\University.Views.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andry\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\Andry\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.0-preview2\\communitytoolkit.mvvm.8.2.0-preview2.nupkg.sha512",
